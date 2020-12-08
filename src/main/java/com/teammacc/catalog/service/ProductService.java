@@ -8,7 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.teammacc.catalog.data.vo.ProductVO;
-import com.teammacc.catalog.entity.Category;
 import com.teammacc.catalog.entity.Product;
 import com.teammacc.catalog.exception.ResourceNotFoundException;
 import com.teammacc.catalog.repository.ProductRepository;

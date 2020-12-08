@@ -1,7 +1,6 @@
 package com.teammacc.catalog.data.vo;
 
 import java.io.Serializable;
-import java.util.List;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.hateoas.RepresentationModel;
@@ -9,14 +8,6 @@ import org.springframework.hateoas.RepresentationModel;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.teammacc.catalog.entity.Catalog;
-
-
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
 @JsonPropertyOrder({"id","name"})
 public class CatalogVO extends RepresentationModel<ProductVO> implements Serializable{

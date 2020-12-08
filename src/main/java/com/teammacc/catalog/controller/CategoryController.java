@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.teammacc.catalog.data.vo.CategoryVO;
-import com.teammacc.catalog.data.vo.ProductVO;
 import com.teammacc.catalog.service.CategoryService;
 
 @RestController
