@@ -3,8 +3,6 @@ package com.teammacc.catalog.controller;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-import java.util.Iterator;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -27,7 +25,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.teammacc.catalog.data.vo.CatalogVO;
 import com.teammacc.catalog.data.vo.CategoryVO;
 import com.teammacc.catalog.data.vo.ProductVO;
-import com.teammacc.catalog.repository.CategoryRepository;
 import com.teammacc.catalog.service.CatalogService;
 import com.teammacc.catalog.service.CategoryService;
 import com.teammacc.catalog.service.ProductService;
