@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: catalog
+  labels:
+    app: catalog
+spec:
+  selector:
+    app: catalog
+  ports:
+    - port: 8080
+      name: http
+  type: NodePort
+---
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: catalog
+spec:
+  replicas: 1
+  template:
+    metadata:
+      annotations: 
+        sidecar.istio.io/inject: "true"      
+      labels:
+        app: catalog
+        version: v1
+    spec:
+      containers:
+      - name: catalog
+        image: catalog:1
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always
+---
