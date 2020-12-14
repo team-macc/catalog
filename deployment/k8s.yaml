@@ -27,11 +27,11 @@ spec:
         sidecar.istio.io/inject: "true"      
       labels:
         app: catalog
-        version: v1
+        version: v3
     spec:
       containers:
       - name: catalog
-        image: samuelpereiradesouza/catalog:2
+        image: samuelpereiradesouza/catalog:4
         ports:
         - containerPort: 8080
       restartPolicy: Always

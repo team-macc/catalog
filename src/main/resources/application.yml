@@ -13,4 +13,4 @@ spring:
   datasource:
     url: jdbc:mysql://catalog-db-1-mysql/catalog?allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC
     username: root
-    password: bHebM1OEWA
+    password: 1234qwer
