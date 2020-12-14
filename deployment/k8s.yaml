@@ -13,10 +13,13 @@ spec:
   type: NodePort
 ---
 kind: Deployment
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 metadata:
   name: catalog
 spec:
+  selector:
+    matchLabels:
+      app: catalog
   replicas: 1
   template:
     metadata:
@@ -28,7 +31,7 @@ spec:
     spec:
       containers:
       - name: catalog
-        image: catalog:1
+        image: samuelpereiradesouza/catalog:2
         ports:
         - containerPort: 8080
       restartPolicy: Always
