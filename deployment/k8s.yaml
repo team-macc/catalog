@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: catalog
-        image: samuelpereiradesouza/catalog:4
+        image: samuelpereiradesouza/catalog:6
         ports:
         - containerPort: 8080
       restartPolicy: Always
