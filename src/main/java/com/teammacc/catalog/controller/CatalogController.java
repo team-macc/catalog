@@ -98,7 +98,7 @@ public class CatalogController {
 	
 	@PostMapping(produces = {"application/json","application/xml","application/x-yaml"},
 			consumes = {"application/json","application/xml","application/x-yaml"})
-	public CatalogVO create(@RequestHeader("token") String token, @RequestBody CatalogVO catalogVO) {
+	public CatalogVO create(@RequestBody CatalogVO catalogVO) {
 		
 		
 		CatalogVO  catVO = catalogService.create(catalogVO);
