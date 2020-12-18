@@ -14,6 +14,7 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.teammacc.catalog.data.vo.CategoryVO;
 import com.teammacc.catalog.service.CategoryService;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
@@ -53,7 +55,6 @@ public class CategoryController {
 	@PostMapping(produces = {"application/json","application/xml","application/x-yaml"},
 			consumes = {"application/json","application/xml","application/x-yaml"})
 	public CategoryVO create(@RequestBody CategoryVO categoryVO) {
-		
 		
 		CategoryVO  catVO = categoryService.create(categoryVO);
 		catVO.add(linkTo(methodOn(CategoryController.class).findById(catVO.getId())).withSelfRel());
