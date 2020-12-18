@@ -12,7 +12,7 @@ import com.teammacc.catalog.entity.Category;
 import com.teammacc.catalog.entity.Product;
 
 
-@JsonPropertyOrder({"id","name","description","price","category"})
+@JsonPropertyOrder({"id","name","description","price","category", "imageUrl"})
 public class ProductVO extends RepresentationModel<ProductVO> implements Serializable{
 
 	private static final long serialVersionUID = 3267976156500540485L;
@@ -31,6 +31,10 @@ public class ProductVO extends RepresentationModel<ProductVO> implements Seriali
 	
 	@JsonProperty("category")
 	private Category category;
+	
+	@JsonProperty("imageUrl")
+	private String imageUrl;
+	
 	
 	public Long getId() {
 		return id;
@@ -70,6 +74,14 @@ public class ProductVO extends RepresentationModel<ProductVO> implements Seriali
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public static ProductVO create(Product product) {
