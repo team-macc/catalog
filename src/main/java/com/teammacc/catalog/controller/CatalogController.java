@@ -88,7 +88,6 @@ public class CatalogController {
 			PagedModel<EntityModel<ProductVO>> pagedModel = productAssembler.toModel(products);
 			
 			return new ResponseEntity<>(pagedModel, HttpStatus.OK);
-			
 		}
 		
 		return null;
