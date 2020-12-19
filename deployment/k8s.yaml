@@ -27,7 +27,7 @@ spec:
         sidecar.istio.io/inject: "true"      
       labels:
         app: catalog
-        version: v1
+        version: v3
     spec:
       containers:
       - name: catalog

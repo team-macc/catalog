@@ -35,6 +35,9 @@ public class Product implements Serializable {
 	@Column(name = "price", nullable = false, length = 10)
 	private Double price;
 	
+	@Column(name = "imageUrl", nullable = false, length = 255)
+	private String imageUrl;
+	
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	@NotNull
@@ -78,6 +81,14 @@ public class Product implements Serializable {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public static Product create(ProductVO productVO){

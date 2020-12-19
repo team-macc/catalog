@@ -1,0 +1,1 @@
+INSERT INTO `catalog`.`catalog` (`id`, `name`) VALUES ('1', 'catalog1');

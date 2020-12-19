@@ -1,3 +1,6 @@
+
+
+
 spring:
   application:
     name: catalog
@@ -7,7 +10,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   jmx:
     enabled: false
   datasource:
