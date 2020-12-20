@@ -3,6 +3,11 @@ package com.teammacc.catalog.controller;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,7 +24,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -53,10 +57,11 @@ public class CatalogController {
 	
 	@GetMapping(value = "/{id}", produces = {"application/json","application/xml","application/x-yaml"})
 	public CatalogVO findById(@PathVariable("id") Long id) {
-		
+			
 		CatalogVO catalogVO = catalogService.findById(id);
 		catalogVO.add(linkTo(methodOn(CategoryController.class).findById(id)).withSelfRel());
 		return catalogVO;
+
 	}
 	
 	@GetMapping(value = "/{id}/category/{categoryId}")

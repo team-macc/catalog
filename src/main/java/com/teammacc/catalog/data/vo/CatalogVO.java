@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.teammacc.catalog.entity.Catalog;
 
 @JsonPropertyOrder({"id","name"})
-public class CatalogVO extends RepresentationModel<ProductVO> implements Serializable{
+public class CatalogVO extends RepresentationModel<CatalogVO> implements Serializable{
 
 	private static final long serialVersionUID = 5098670473577699777L;
 	
